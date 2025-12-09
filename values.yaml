@@ -241,6 +241,9 @@ podSecurityContext:
   ## runAsNonRoot: true
   ## runAsUser: 1000
 securityContext:
+  capabilities:
+    drop:
+    - ALL
   runAsUser: 65534
   runAsGroup: 65534
   runAsNonRoot: true
