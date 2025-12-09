@@ -20,6 +20,9 @@ spec:
       http: &http_rules
         paths:
           - path: /
+            pathType: Prefix
             backend:
-              serviceName: pmm-npool-top
-              servicePort: 80
+              service:
+                name: pmm-npool-top
+                port:
+                  number: 80
