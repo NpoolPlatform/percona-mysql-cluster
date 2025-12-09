@@ -225,10 +225,10 @@ podAnnotations: {}
   ## fsGroup: 2000
 ##
 podSecurityContext:
-  runAsUser: 1000
-  runAsGroup: 1000
+  runAsUser: 0
+  runAsGroup: 0
   fsGroupChangePolicy: OnRootMismatch
-  fsGroup: 1000
+  fsGroup: 0
 
 ## @param securityContext Configure Container Security Context
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
@@ -248,6 +248,9 @@ securityContext:
     add:
     - SYS_CHROOT
   allowPrivilegeEscalation: false
+  runAsUser: 0
+  runAsGroup: 0
+  runAsNonRoot: false
 
 ## @param nodeSelector Node labels for pod assignment
 ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
