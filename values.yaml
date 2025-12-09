@@ -245,8 +245,8 @@ podSecurityContext:
   ## runAsUser: 1000
 securityContext:
   capabilities:
-    drop:
-    - ALL
+    add:
+    - SYS_CHROOT
   allowPrivilegeEscalation: false
 
 ## @param nodeSelector Node labels for pod assignment
