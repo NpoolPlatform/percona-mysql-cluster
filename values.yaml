@@ -224,8 +224,8 @@ podAnnotations: {}
 ## podSecurityContext:
   ## fsGroup: 2000
 ##
-podSecurityContext:
-  fsGroup: 65534
+podSecurityContext: {}
+  ## fsGroup: 65534
 
 ## @param securityContext Configure Container Security Context
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
